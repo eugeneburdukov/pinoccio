@@ -23,6 +23,10 @@ public class CommonActions {
                 System.setProperty("webdriver.chrome.driver", "src/main/resources/intel_chromedriver");
                 driver = new ChromeDriver();
                 break;
+            case "aws_chrome":
+                System.setProperty("webdriver.chrome.driver", "/usr/bin/chromedriver");
+                driver = new ChromeDriver();
+                break;
             default:
                 Assert.fail();
         }
