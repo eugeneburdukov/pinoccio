@@ -26,18 +26,16 @@ public class CommonActions {
                 break;
             case "aws_chrome":
                 System.setProperty("webdriver.chrome.driver", "/usr/bin/chromedriver");
-                driver = new ChromeDriver();
+                ChromeOptions options = new ChromeOptions();
+                options.addArguments("headless");
+                options.addArguments("disable-gpu");
+                driver = new ChromeDriver(options);
                 break;
             default:
                 Assert.fail();
         }
 /*        driver.manage().window().maximize();
         driver.manage().timeouts().implicitlyWait(IMPLICIT_WAIT, TimeUnit.SECONDS);*/
-
-        ChromeOptions options = new ChromeOptions();
-        options.addArguments("headless");
-        options.addArguments("disable-gpu");
-        driver = new ChromeDriver(options);
         return driver;
     }
 }
