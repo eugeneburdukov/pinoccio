@@ -17,11 +17,11 @@ public class CommonActions {
 
         switch (PLALFORM_AND_BROWSER) {
             case "macos_m1_chrome":
-                System.setProperty("webdriver.chrome.driver", "src/main/resources/m1_chromedriver");
+                System.setProperty("webdriver.chrome.driver", "src/main/resources/m1Chromedriver");
                 driver = new ChromeDriver();
                 break;
             case "macos_intel_chrome":
-                System.setProperty("webdriver.chrome.driver", "src/main/resources/intel_chromedriver");
+                System.setProperty("webdriver.chrome.driver", "src/main/resources/intelChromedriver");
                 driver = new ChromeDriver();
                 break;
             case "aws_chrome":
